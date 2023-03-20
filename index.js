@@ -16,11 +16,11 @@ App.use((req,res,next)=>{
 
 })
 App.post("/uploadImage", async (req,res)=>{
-    console.log("in server now", req.body.image)
+    
     try {
-        console.log("in server now", req.body.image)
+     
         const serverResponse = await upload(req.body.image)
-          console.log("here inside",serverResponse)
+         
         return  res.status(200).send(serverResponse)
         
     } catch (error) {
